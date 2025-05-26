@@ -1,11 +1,17 @@
 class Aluno:
-    def __init__(self, nome, turma, nota):
+    def __init__(self, nome, matricula, curso):
         self.nome = nome
-        self.turma = turma
-        self.nota = nota
+        self.matricula = matricula
+        self.curso = curso
 
-aluno1 = Aluno("Carlos", "Turma A", 8.5)
-aluno2 = Aluno("Ana", "Turma B", 9.0)
+    def exibir_dados(self):
+        print(f"Nome: {self.nome}")
+        print(f"Matrícula: {self.matricula}")
+        print(f"Curso: {self.curso}")
+        print("-" * 20)  
 
-print(f"Aluno 1: {aluno1.nome}, {aluno1.turma}, Nota: {aluno1.nota}")
-print(f"Aluno 2: {aluno2.nome}, {aluno2.turma}, Nota: {aluno2.nota}")
+aluno1 = Aluno("rian", "53421", "Matemática")
+aluno2 = Aluno("yasmin", "67890", "Direito")
+
+aluno1.exibir_dados()
+aluno2.exibir_dados()
